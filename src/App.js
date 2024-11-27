@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import UserProfile from './UserProfile'; // Assuming the UserProfile component is in the components folder
+import MoviesList from './MoviesList';   // Assuming the MoviesList component is in the components folder
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to My React App</h1>
       </header>
+      <main>
+        <section>
+          <h2>User Profile</h2>
+          <UserProfile />
+        </section>
+        <section>
+          <h2>Favorite Movies</h2>
+          <MoviesList />
+        </section>
+      </main>
     </div>
   );
 }
